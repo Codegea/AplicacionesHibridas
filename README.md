@@ -1,2 +1,0 @@
-# AplicacionesHibridas
-Ruby on Rails
