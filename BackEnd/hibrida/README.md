@@ -1,24 +1,49 @@
-# README
+# Hibrida
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails application.
 
-Things you may want to cover:
+## Ruby Version
 
-* Ruby version
+* ruby-2.4.4
 
-* System dependencies
+## System Dependencies
 
-* Configuration
+* Ruby on Rails
+* SQLite 3
 
-* Database creation
+## Configuration
 
-* Database initialization
+The database configuration is stored in `config/database.yml`. By default, it uses SQLite 3.
 
-* How to run the test suite
+Development database: `db/development.sqlite3`
+Test database: `db/test.sqlite3`
+Production database: `db/production.sqlite3`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database Creation and Initialization
 
-* Deployment instructions
+1.  **Create the database:**
+    ```bash
+    rails db:create
+    ```
+2.  **Run migrations:**
+    ```bash
+    rails db:migrate
+    ```
+3.  **Seed the database (optional):**
+    ```bash
+    rails db:seed
+    ```
 
-* ...
+## How to Run the Test Suite
+
+```bash
+rails test
+```
+
+## Services
+
+*   This application does not use any additional services like job queues, cache servers, or search engines by default.
+
+## Deployment Instructions
+
+Ensure that your production environment has Ruby, Rails, and any other necessary gems installed. Configure your web server (e.g., Puma, Unicorn) and database settings for the production environment.
